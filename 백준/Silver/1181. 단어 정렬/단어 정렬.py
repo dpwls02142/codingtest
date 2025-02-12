@@ -9,7 +9,6 @@ for i in range (n):
     words.append(a)
 
 words = set(words)
-words = sorted(words, key = len)
 words = sorted(words)
 words = sorted(words, key = len)
 
