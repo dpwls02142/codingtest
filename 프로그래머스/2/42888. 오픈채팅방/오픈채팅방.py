@@ -9,10 +9,10 @@ def solution(record):
         if command == "Enter":
             nickname = data[2]
             user_dict[uid] = nickname
-            log.append((uid, "님이 들어왔습니다."))
+            log.append([uid, "님이 들어왔습니다."])
 
         elif command == "Leave":
-            log.append((uid, "님이 나갔습니다."))
+            log.append([uid, "님이 나갔습니다."])
 
         elif command == "Change":
             nickname = data[2]
