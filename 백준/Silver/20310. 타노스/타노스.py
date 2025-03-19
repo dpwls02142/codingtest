@@ -1,14 +1,12 @@
 import sys
-s = sys.stdin.readline().rstrip()
-cnt_0 = 0
-cnt_1 = 1
-for i in s:
-    if i == "0":
-        cnt_0 += 1
-    else:
-        cnt_1 += 1
-
-new_0 = (cnt_0 // 2) * "0"
-new_1 = (cnt_1 // 2) * "1"
-res = ''.join(map(str,(new_0, new_1)))
-print(res)
+s = list(map(str, sys.stdin.readline().rstrip()))
+cnt_0 = s.count("0") // 2
+cnt_1 = s.count("1") // 2
+for i in range (cnt_0):
+    # s를 뒤집은 다음에 0이 어딨는지 찾고
+    # 그 값에 +1을 한 다음 음수를 씌우면
+    # 항상 마지막에 있는 0만 삭제됨
+    s.pop(-(s[::-1].index("0") + 1))
+for i in range (cnt_1):
+    s.pop(s.index("1"))
+print("".join(s))
