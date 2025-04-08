@@ -14,7 +14,7 @@ def size_to_num(s):
 
 for i in range(1, j+1):
     value = sys.stdin.readline().rstrip()
-    size[i] = [size_to_num(value), value]
+    size[i] = [size_to_num(value)]
 
 for i in range(a):
     want_size, want_num = sys.stdin.readline().rstrip().split()
